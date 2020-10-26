@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title>CRUD application</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="header">Лечебные учреждения</h1>
+    <div class="msg">
+
+    </div>
+    <form class="info__form">
+      <div class="info__group">
+        <label for="full_name" class="info__label">Наименование лечебного учреждения</label>
+        <input class="info__input" type="text" name="full_name" value="" id="full_name" required>
+      </div>
+      <div class="info__group">
+        <label for="address" class="info__label">Адрес</label>
+        <input class="info__input" type="text" name="address" value="" id="address" required>
+      </div>
+      <div class="info__group">
+        <label for="phone" class="info__label">Телефон в формате 8xxx-xxx-xxxx:</label>
+        <input class="info__input" type="tel" pattern="8[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" value="" id="phone" placeholder="8xxx-xxx-xxxx" required>
+      </div>
+      <input type="submit" value="Add a hospital" class="info__input input-submit">
+    </form>
+    <form class="load__form">
+      <button class="load load__button">Load hospitals from file</button>
+    </form>
+    <div class="output">
+      <table class="table">
+        <thead class="table__head">
+          <tr>
+            <th>Лечебное учреждение</th>
+            <th>Адрес</th>
+            <th>Телефон</th>
+            <th>
+              <img src="img/edit.png" class="edit" alt="Edit" width="20px" height="20px">
+            </th>
+            <th>
+              <img src="img/delete.png" class="delete" alt="Delete" width="30px" height="20px">
+            </th>
+          </tr>
+        </thead>
+        <tbody class="table__body">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script type=" text/javascript" src="main.js"> </script>
+</body>
+
+</html>
